@@ -6,7 +6,7 @@
 
 <p>Poderão ser cadastrados participantes e salas na quantidade que o usuário desejar, todavia é permitido cadastrar somente dois ambientes de coffe break.</p>
 
-<p> O Organizador considera que o evento ocorrerá em duas etapas. Dessa forma, a fim de aumentar a socialização dos participantes, metade dos participantes de cada sala será trocado de sala ao fim da primeira etapa. Por outro lado, os participantes farão seus coffe breaks sempre no mesmo espaço.</p>
+<p> O Organizador considera que o evento ocorrerá em duas etapas. Dessa forma, a fim de aumentar a socialização dos participantes, metade dos participantes de cada sala será trocado de sala ao final da primeira etapa. Por outro lado, os participantes farão seus coffe breaks sempre no mesmo espaço.</p>
 
 <h3>Pré-requisitos:</h3>
 <p>Para rodar esse programa, você precisará ter o Python instalado em sua máquina, cujo download pode ser feito em https://www.python.org/downloads/.</p>
