@@ -22,8 +22,8 @@ def menu_cadastro():
 
 
 def cad_participantes():
-    p_nome = input("Escreva o nome do aluno: \n").upper()
-    sobrenome = (input("Insira o sobrenome dele: \n").upper())
+    p_nome = input("Escreva apenas o primeiro nome do aluno: \n").upper()
+    sobrenome = (input("Agora insira somente o sobrenome dele: \n").upper())
     espaco = ' '
     p_cadastrado = p_nome + espaco + sobrenome
     return p_cadastrado

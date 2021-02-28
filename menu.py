@@ -61,6 +61,10 @@ def inicia_programa():
                 elif dircad == str(4):  # Para voltar ao menu inicial
                     break
 
+        participantes_pc = participantes[:]
+        salast1_pc = deepcopy(salast1)
+        cafes_pc = deepcopy(cafes)
+
         if direcao == str(2):
             if not participantes or not salast1 or not cafes:
                 print("Antes de fazer consutas, você precisa as cadastrar salas, os participantes e os cafés.")
@@ -77,16 +81,16 @@ def inicia_programa():
 
                 # Organização da sala no primeiro tempo
 
-                while participantes:
-                    for sala in salast1:
+                while participantes_pc:
+                    for sala in salast1_pc:
                         for b in range(0, 1):
-                            if not participantes:
+                            if not participantes_pc:
                                 break
                             else:
-                                sala.append(participantes[0])
-                                del participantes[0]
+                                sala.append(participantes_pc[0])
+                                del participantes_pc[0]
 
-                salast2 = deepcopy(salast1)
+                salast2 = deepcopy(salast1_pc)
 
                 # Fim
                 # Organização da sala no segundo tempo
@@ -106,7 +110,7 @@ def inicia_programa():
                 # Organização dos espaços de café
 
                 while participantes_c:
-                    for i in cafes:
+                    for i in cafes_pc:
                         for k in range(0, 1):
                             if not participantes_c:
                                 break
@@ -118,20 +122,20 @@ def inicia_programa():
                     dircon = funcoes.menu_consulta()  # Menu de consulta
                     if dircon == str(1):  # Consulta de participante
                         consulta_nome = input("Digite o nome completo "
-                                              "do participante que você quer consultar:\n").upper()
-                        for x in salast1:
+                                              "do participante que você deseja consultar:\n").upper()
+                        for x in salast1_pc:
                             if consulta_nome in x:
                                 print("Na primeira etapa, {} estará na sala {}.".format(consulta_nome, x[0]))
                         for y in salast2:
                             if consulta_nome in y:
                                 print("Na segunda etapa, {} estará na sala {}.".format(consulta_nome, y[0]))
-                        for z in cafes:
+                        for z in cafes_pc:
                             if consulta_nome in z:
                                 print("{} fará seus cafés no espaço {}.\n".format(consulta_nome, z[0]))
 
                     if dircon == str(2):  # Consulta de sala
-                        consulta_sala = input("Digite o nome da sala que você quer consultar:\n").upper()
-                        for w in salast1:
+                        consulta_sala = input("Digite o nome da sala que você deseja consultar:\n").upper()
+                        for w in salast1_pc:
                             if consulta_sala in w:
                                 print("Na primeira etapa, a sala {} estará com "
                                       "os seguintes participantes:\n {}".format(consulta_sala, w[2:]))
@@ -141,7 +145,10 @@ def inicia_programa():
                                       "os seguintes participantes:\n {}\n".format(consulta_sala, ww[2:]))
 
                     if dircon == str(3):  # Consulta de espaço para café
-                        print("Os cafés cadastrados são:\n{}\n".format(cafes))
+                        consulta_cafe = input("Digite o nome do café que você deseja consultar:\n").upper()
+                        for z in cafes_pc:
+                            if consulta_cafe in z:
+                                print("O ambiente {} terá os participantes {}.\n".format(consulta_cafe, z[1:]))
                     if dircon == str(4):  # Para voltar ao menu inicial
                         break
 
