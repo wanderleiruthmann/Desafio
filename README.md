@@ -1,6 +1,6 @@
 # DESAFIO - Programa organizador de eventos
 
-<h3>Uilitade e funcionamento:</h3>
+<h3>Utilitade e funcionamento:</h3>
 
 <p>O Organizador de Eventos é um programa desenvolvido 100% em Python, que como o próprio nome sugere, serve para auxiliar na organização de eventos. Nele é possível cadastrar participantes, salas e ambientes de coffe break. Com o cadastro feito, o Organizador fará a distribuição dos participantes pelas salas e ambientes cadastrados, sempre mantendo a diferença máxima de uma pessoa entre os lugares.</p>
 
