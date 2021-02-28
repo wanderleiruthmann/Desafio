@@ -17,7 +17,7 @@ def inicia_programa():
                     while True:
                         p_cadastrado = funcoes.cad_participantes()
                         participantes.append(p_cadastrado)
-                        print("{} foi cadastrado(a) com sucesso!\n".format(p_cadastrado))
+                        print("{} foi cadastrado(a) com sucesso!".format(p_cadastrado))
                         while True:
                             m_cadastros = funcoes.continuar_cadastrando()
                             if m_cadastros == str("S"):
@@ -35,7 +35,7 @@ def inicia_programa():
                     while True:
                         s_cadastrada = funcoes.cad_salas()
                         salast1.append(s_cadastrada)
-                        print("A sala {} foi cadastrada com sucesso!\n".format(s_cadastrada))
+                        print("A sala foi cadastrada com sucesso!")
                         while True:
                             m_cadastros = funcoes.continuar_cadastrando()
                             if m_cadastros == str("S"):
@@ -55,11 +55,12 @@ def inicia_programa():
                         c_cadastrado = funcoes.cad_cafes()
                         cafes.append(c_cadastrado)
                         cafes_disp -= 1
-                        print(cafes)
-                        print("O espaço {} foi cadastrado com sucesso!\n".format(c_cadastrado))
-                    print("É possível cadastrar somente dois espaços para café.")
+                        print("O espaço foi cadastrado com sucesso!".format(c_cadastrado))
+                    print("É possível cadastrar somente dois espaços para café.\n")
                 elif dircad == str(4):  # Para voltar ao menu inicial
                     break
+                else:  # Corrige número digitado errado
+                    print("Você precisa digitar 1, 2, 3 ou 4!\n")
 
         participantes_pc = participantes[:]
         salast1_pc = deepcopy(salast1)
@@ -118,11 +119,15 @@ def inicia_programa():
                                 i.append(participantes_c[0])
                                 del participantes_c[0]
 
+                # Fim
+                # Fim das funções de consulta
+
                 while True:
                     dircon = funcoes.menu_consulta()  # Menu de consulta
                     if dircon == str(1):  # Consulta de participante
                         consulta_nome = input("Digite o nome completo "
-                                              "do participante que você deseja consultar:\n").upper()
+                                              "do participante que você deseja consultar, inserindo um espaço"
+                                              " em branco entre os nomes:\n").upper()
                         for x in salast1_pc:
                             if consulta_nome in x:
                                 print("Na primeira etapa, {} estará na sala {}.".format(consulta_nome, x[0]))
@@ -133,27 +138,69 @@ def inicia_programa():
                             if consulta_nome in z:
                                 print("{} fará seus cafés no espaço {}.\n".format(consulta_nome, z[0]))
 
-                    if dircon == str(2):  # Consulta de sala
+                    elif dircon == str(2):  # Consulta de sala
                         consulta_sala = input("Digite o nome da sala que você deseja consultar:\n").upper()
-                        for w in salast1_pc:
+                        salast1_pcc = deepcopy(salast1_pc)
+                        salast2_pcc = deepcopy(salast2)
+                        for w in salast1_pcc:
                             if consulta_sala in w:
+                                del w[0:2]
+                                w = '\n '.join(w)
                                 print("Na primeira etapa, a sala {} estará com "
-                                      "os seguintes participantes:\n {}".format(consulta_sala, w[2:]))
-                        for ww in salast2:
+                                      "os seguintes participantes:\n {}".format(consulta_sala, w))
+                        for ww in salast2_pcc:
                             if consulta_sala in ww:
+                                del ww[0:2]
+                                ww = '\n '.join(ww)
                                 print("Na segunda etapa, a sala {} estará com "
-                                      "os seguintes participantes:\n {}\n".format(consulta_sala, ww[2:]))
+                                      "os seguintes participantes:\n {}\n".format(consulta_sala, ww))
 
-                    if dircon == str(3):  # Consulta de espaço para café
+                    elif dircon == str(3):  # Consulta de espaço para café
                         consulta_cafe = input("Digite o nome do café que você deseja consultar:\n").upper()
-                        for z in cafes_pc:
+                        cafes_pcc = deepcopy(cafes_pc)
+                        for z in cafes_pcc:
                             if consulta_cafe in z:
-                                print("O ambiente {} terá os participantes {}.\n".format(consulta_cafe, z[1:]))
-                    if dircon == str(4):  # Para voltar ao menu inicial
+                                del z[0]
+                                z = '\n '.join(z)
+                                print("O espaço {} terá os seguintes participantes:\n {}\n".format(consulta_cafe, z))
+
+                    if dircon == str(4):  # Lista de todos cadastros realizados
+                        plcr = participantes[:]
+                        s1lcr = deepcopy(salast1_pc)
+                        s2lcr = deepcopy(salast2)
+                        clcr = deepcopy(cafes_pc)
+                        plcr = '\n '.join(plcr)
+                        print("Participantes:\n {}\n".format(plcr))
+                        print("Salas do primeiro período com seus respectivos participantes:")
+                        for aaa in s1lcr:
+                            print("{}: ".format(aaa[0]))
+                            del aaa[0:2]
+                            aaa = '\n '.join(aaa)
+                            print("{}\n".format(aaa))
+                        print("Salas do segundo período com seus respectivos participantes:")
+                        for bbb in s2lcr:
+                            print("{}: ".format(bbb[0]))
+                            del bbb[0:2]
+                            bbb = '\n '.join(bbb)
+                            print("{}\n".format(bbb))
+                        print("Ambientes de coffe break com seus respectivos participantes:")
+                        for ccc in clcr:
+                            print("{}: ".format(ccc[0]))
+                            del ccc[0]
+                            ccc = '\n '.join(ccc)
+                            print("{}\n".format(ccc))
+
+                    elif dircon == str(5):  # Volta ao menu inicial
                         break
 
-        if direcao == str(3):
+                    else:  # Corrige número digitado errado
+                        print("Você precisa digitar 1, 2, 3, 4 ou 5!\n")
+
+        if direcao == str(3):  # Encerrar programa
             break
+
+        if direcao != str(1) or str(2) or str(3):
+            print("Você precisa digitar 1, 2 ou 3!\n")
 
 
 if __name__ == "__main__":

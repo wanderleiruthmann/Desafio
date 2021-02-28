@@ -8,7 +8,7 @@ def imprimir_mensagem_inicial():
 
 
 def escolher_cadastro_ou_consulta():
-    print("O que você quer fazer?")
+    print("O que você deseja fazer?")
     r = input("(1) Cadastro \n(2) Consulta \n(3) Encerrar o programa \n")
     return r
 
@@ -16,7 +16,7 @@ def escolher_cadastro_ou_consulta():
 
 
 def menu_cadastro():
-    print("O que você quer cadastrar?")
+    print("O que você deseja cadastrar?")
     r = input("(1) Participantes \n(2) Salas \n(3) Espaços para café \n(4) Voltar para o menu inicial \n")
     return r
 
@@ -49,6 +49,7 @@ def cad_cafes():
 
 
 def menu_consulta():
-    print("O que você quer consultar?")
-    r = input("(1) Participantes \n(2) Salas \n(3) Espaços para café \n(4) Voltar para o menu inicial \n")
+    print("O que você deseja consultar?")
+    r = input("(1) Participantes \n(2) Salas \n(3) Espaços para café \n"
+              "(4) Todos cadastros realizados \n(5) Voltar para o menu inicial \n")
     return r
