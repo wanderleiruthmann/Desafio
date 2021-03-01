@@ -2,11 +2,11 @@
 
 <h3>Utilitade e funcionamento:</h3>
 
-<p>O Organizador de Eventos é um programa desenvolvido 100% em Python, que como o próprio nome sugere, serve para auxiliar na organização de eventos. Nele é possível cadastrar participantes, salas e ambientes de coffe break. Com o cadastro feito, o Organizador fará a distribuição dos participantes pelas salas e ambientes cadastrados, sempre mantendo a diferença máxima de uma pessoa entre os lugares.</p>
+<p>O Organizador de Eventos é um programa desenvolvido 100% em Python, que como o próprio nome sugere, serve para auxiliar na organização de eventos. Nele é possível cadastrar participantes, salas e ambientes de coffee break. Com o cadastro feito, o Organizador fará a distribuição dos participantes pelas salas e ambientes cadastrados, sempre mantendo a diferença máxima de uma pessoa entre os lugares.</p>
 
-<p>Poderão ser cadastrados participantes e salas na quantidade que o usuário desejar, todavia é permitido cadastrar somente dois ambientes de coffe break.</p>
+<p>Poderão ser cadastrados participantes e salas na quantidade que o usuário desejar, todavia é permitido cadastrar somente dois ambientes de coffee break.</p>
 
-<p> O Organizador considera que o evento ocorrerá em duas etapas. Dessa forma, a fim de aumentar a socialização dos participantes, metade dos participantes de cada sala será trocado de sala ao final da primeira etapa. Por outro lado, os participantes farão seus coffe breaks sempre no mesmo espaço.</p>
+<p> O Organizador considera que o evento ocorrerá em duas etapas. Dessa forma, a fim de aumentar a socialização dos participantes, metade dos participantes de cada sala será trocado de sala ao final da primeira etapa. Por outro lado, os participantes farão seus coffee breaks sempre no mesmo espaço.</p>
 
 <h3>Pré-requisitos:</h3>
 <p>Para rodar esse programa, você precisará ter o Python instalado em sua máquina, cujo download pode ser feito em https://www.python.org/downloads/.</p>
