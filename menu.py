@@ -95,17 +95,18 @@ def inicia_programa():
 
                 # Fim
                 # Organização da sala no segundo tempo
-
-                for i in range(0, n_trocados):
-                    for sala in salast2:
-                        if participantesgeral[0] not in sala:
-                            sala.append(participantesgeral[0])
-                            del participantesgeral[0]
-                        elif participantesgeral[1] not in sala:
-                            sala.append(participantesgeral[1])
-                            del participantesgeral[1]
-                    for sala in salast2:
-                        del sala[2]
+                
+                if n_salast1 >= 2:
+                    for i in range(0, n_trocados):
+                        for sala in salast2:
+                            if participantesgeral[0] not in sala:
+                                sala.append(participantesgeral[0])
+                                del participantesgeral[0]
+                            elif participantesgeral[1] not in sala:
+                                sala.append(participantesgeral[1])
+                                del participantesgeral[1]
+                        for sala in salast2:
+                            del sala[2]
 
                 # Fim
                 # Organização dos espaços de café
@@ -169,25 +170,25 @@ def inicia_programa():
                         s1lcr = deepcopy(salast1_pc)
                         s2lcr = deepcopy(salast2)
                         clcr = deepcopy(cafes_pc)
-                        plcr = '\n '.join(plcr)
+                        plcr = '\n'.join(plcr)
                         print("Participantes:\n {}\n".format(plcr))
                         print("Salas do primeiro período com seus respectivos participantes:")
                         for aaa in s1lcr:
                             print("{}: ".format(aaa[0]))
                             del aaa[0:2]
-                            aaa = '\n '.join(aaa)
+                            aaa = '\n'.join(aaa)
                             print("{}\n".format(aaa))
                         print("Salas do segundo período com seus respectivos participantes:")
                         for bbb in s2lcr:
                             print("{}: ".format(bbb[0]))
                             del bbb[0:2]
-                            bbb = '\n '.join(bbb)
+                            bbb = '\n'.join(bbb)
                             print("{}\n".format(bbb))
                         print("Ambientes de coffe break com seus respectivos participantes:")
                         for ccc in clcr:
                             print("{}: ".format(ccc[0]))
                             del ccc[0]
-                            ccc = '\n '.join(ccc)
+                            ccc = '\n'.join(ccc)
                             print("{}\n".format(ccc))
 
                     elif dircon == str(5):  # Volta ao menu inicial
@@ -198,9 +199,6 @@ def inicia_programa():
 
         if direcao == str(3):  # Encerrar programa
             break
-
-        if direcao != str(1) or str(2) or str(3):
-            print("Você precisa digitar 1, 2 ou 3!\n")
 
 
 if __name__ == "__main__":
