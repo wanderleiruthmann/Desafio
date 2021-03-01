@@ -171,7 +171,7 @@ def inicia_programa():
                         s2lcr = deepcopy(salast2)
                         clcr = deepcopy(cafes_pc)
                         plcr = '\n'.join(plcr)
-                        print("Participantes:\n {}\n".format(plcr))
+                        print("Participantes:\n{}\n".format(plcr))
                         print("Salas do primeiro período com seus respectivos participantes:")
                         for aaa in s1lcr:
                             print("{}: ".format(aaa[0]))
