@@ -59,8 +59,6 @@ def inicia_programa():
                     print("É possível cadastrar somente dois espaços para café.\n")
                 elif dircad == str(4):  # Para voltar ao menu inicial
                     break
-                else:  # Corrige número digitado errado
-                    print("Você precisa digitar 1, 2, 3 ou 4!\n")
 
         participantes_pc = participantes[:]
         salast1_pc = deepcopy(salast1)
@@ -193,9 +191,6 @@ def inicia_programa():
 
                     elif dircon == str(5):  # Volta ao menu inicial
                         break
-
-                    else:  # Corrige número digitado errado
-                        print("Você precisa digitar 1, 2, 3, 4 ou 5!\n")
 
         if direcao == str(3):  # Encerrar programa
             break
