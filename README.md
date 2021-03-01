@@ -11,7 +11,7 @@
 <h3>Pré-requisitos:</h3>
 <p>Para rodar esse programa, você precisará ter o Python instalado em sua máquina, cujo download pode ser feito em https://www.python.org/downloads/.</p>
 <p>Os códigos do Organizador, por sua vez, podem ser baixados em https://github.com/wanderleiruthmann/programa.git.</p>
-<p>Uma vez que o Python e os arquivos estejam na máquina, basta extrair e executar o arquivo menu.py. O programa rodará no console do Python, não sendo necessário fazer compilação.</p>
+<p>Uma vez que o Python e os arquivos estejam na máquina, basta extrair os arquivos da pasta "Desafio-main.zip" e executar o arquivo menu.py. O programa rodará no console do Python, não sendo necessário fazer compilação.</p>
 
 <h3>Usabilidade:</h3>
 <p>Todo o menu é bastante intuitivo. Para fazer a navegação é preciso apenas digitar as opções que o sistema oferece.<p/>
